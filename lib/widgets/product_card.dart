@@ -23,10 +23,11 @@ class ProductCard extends StatelessWidget {
 						spacing: 4,
 						children: [
 							Expanded(
-								child: Image(
-									image: Image.asset('lib/images/SM2412267D_2_1100x.webp').image,
-									alignment: Alignment.topCenter,
-								),
+								child: Container(
+									decoration: BoxDecoration(
+										color: Colors.black
+									),
+								)
 							),
 							Text(
 								'Men Printed Oversized Tee - SM2412267',

@@ -22,6 +22,28 @@ class HomePage extends StatelessWidget {
 						image: Image.asset('lib/images/thumbnail_1.webp').image,
 					),
 
+					SizedBox(
+						height: 20,
+					),
+
+					Container(
+						margin: EdgeInsets.symmetric(horizontal: 8),
+						height: 400,
+						decoration: BoxDecoration(
+							color: Colors.black,
+						),
+						child: Center(
+							child: Text(
+								'New Arrivals',
+								style: TextStyle(
+									color:Colors.white,
+									fontSize: 20,
+									fontWeight: FontWeight.w700
+								),
+							),
+						),
+					),
+
 					Container(
 						margin: EdgeInsets.only(top: 24, left: 24, right: 24, bottom: 24),
 						child: Column(
@@ -37,9 +59,78 @@ class HomePage extends StatelessWidget {
 						    	),
 						    ),
 
-								Image(image: Image.asset('lib/images/thumbnail_2.webp').image),
-								Image(image: Image.asset('lib/images/thumbnail_3.webp').image),
-								Image(image: Image.asset('lib/images/thumbnail_4.webp').image),
+								GridView.count(
+									crossAxisCount: 2,
+									crossAxisSpacing: 8,
+									mainAxisSpacing: 8,
+									shrinkWrap: true,
+									physics: NeverScrollableScrollPhysics(),
+									children: [
+										Container(
+											decoration: BoxDecoration(
+												color: Colors.black
+											),
+											child: Center(
+												child: Text(
+													'Mens',
+													style: TextStyle(
+														color: Colors.white,
+														fontSize: 16,
+														fontWeight: FontWeight.bold,
+													),
+												),
+											),
+										),
+										Container(
+											decoration: BoxDecoration(
+												color: Colors.black
+											),
+											child: Center(
+												child: Text(
+													'Womens',
+													style: TextStyle(
+														color: Colors.white,
+														fontSize: 16,
+														fontWeight: FontWeight.bold,
+													),
+												),
+											),
+										),
+										Container(
+											decoration: BoxDecoration(
+												color: Colors.black
+											),
+											child: Center(
+												child: Text(
+													'Children',
+													style: TextStyle(
+														color: Colors.white,
+														fontSize: 16,
+														fontWeight: FontWeight.bold,
+													),
+												),
+											),
+										),
+										Container(
+											decoration: BoxDecoration(
+												color: Colors.black
+											),
+											child: Center(
+												child: Text(
+													'Accessories',
+													style: TextStyle(
+														color: Colors.white,
+														fontSize: 16,
+														fontWeight: FontWeight.bold,
+													),
+												),
+											),
+										),
+									],
+								),
+
+
+								
 						  ],
 						),
 					)

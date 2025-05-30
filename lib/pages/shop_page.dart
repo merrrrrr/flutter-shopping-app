@@ -24,8 +24,6 @@ class ShopPage extends StatelessWidget {
 				children: [
 					SizedBox(
 						height: 2800,
-						
-						
 						child: Column(
 						  children: [
 						    Container(
