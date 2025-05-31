@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_shopping_app/pages/cart_page.dart';
 import 'package:flutter_shopping_app/pages/home_page.dart';
 import 'package:flutter_shopping_app/pages/profile_page.dart';
-import 'package:flutter_shopping_app/pages/shop_page.dart';
+import 'package:flutter_shopping_app/pages/search_page.dart';
 
 
 class IntroPage extends StatefulWidget {
@@ -17,7 +17,7 @@ class _IntroPageState extends State<IntroPage> {
 
 	final List _pages = [
 		HomePage(),
-		ShopPage(),
+		SearchPage(),
 		CartPage(),
 		ProfilePage(),
 	];
@@ -44,8 +44,8 @@ class _IntroPageState extends State<IntroPage> {
 							),
 			
 							BottomNavigationBarItem(
-								icon: Icon(Icons.shopping_bag),
-								label: 'Shop',
+								icon: Icon(Icons.search),
+								label: 'Search',
 							),
 
 							BottomNavigationBarItem(

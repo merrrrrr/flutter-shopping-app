@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shopping_app/widgets/image_slider.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -18,30 +19,11 @@ class HomePage extends StatelessWidget {
 			
 			body: ListView(
 				children: [
-					Image(
-						image: Image.asset('lib/images/thumbnail_1.webp').image,
-					),
+					ImageSlider(),
+
 
 					SizedBox(
 						height: 20,
-					),
-
-					Container(
-						margin: EdgeInsets.symmetric(horizontal: 8),
-						height: 400,
-						decoration: BoxDecoration(
-							color: Colors.black,
-						),
-						child: Center(
-							child: Text(
-								'New Arrivals',
-								style: TextStyle(
-									color:Colors.white,
-									fontSize: 20,
-									fontWeight: FontWeight.w700
-								),
-							),
-						),
 					),
 
 					Container(
