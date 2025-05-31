@@ -23,11 +23,11 @@ class HomePage extends StatelessWidget {
 
 
 					SizedBox(
-						height: 20,
+						height: 36,
 					),
 
 					Container(
-						margin: EdgeInsets.only(top: 24, left: 24, right: 24, bottom: 24),
+						margin: EdgeInsets.symmetric(horizontal: 12),
 						child: Column(
 							spacing: 20,
 						  children: [
@@ -110,12 +110,177 @@ class HomePage extends StatelessWidget {
 										),
 									],
 								),
-
-
-								
 						  ],
 						),
-					)
+					),
+
+					SizedBox(
+						height: 36,
+					),
+					
+					Container(
+						margin: EdgeInsets.only(bottom: 8, left: 12, right: 12),
+						child: Row(
+							mainAxisAlignment: MainAxisAlignment.spaceBetween,
+							children: [
+								Text(
+									'New Arrivals',
+									style: TextStyle(
+										fontSize: 20,
+										fontWeight: FontWeight.bold,
+									),
+								),
+
+								TextButton(
+									onPressed: () {},
+									child: Text(
+										'See All',
+										style: TextStyle(
+											fontSize: 14,
+											color: Colors.black,
+										),
+									),
+								),
+							],
+						),
+					),
+
+					SizedBox(
+						height: 280,
+						child: ListView.builder(
+							itemCount: 10,
+							scrollDirection: Axis.horizontal,
+							itemBuilder: (context, index) {
+								return Container(
+									width: 200,
+									padding: EdgeInsets.all(8),
+									decoration: BoxDecoration(
+										color: Colors.grey[200],
+										borderRadius: BorderRadius.circular(12),
+										border: Border.all(
+											color: Colors.grey,
+											width: 1,
+										),
+									),
+									margin: EdgeInsets.symmetric(horizontal: 8),
+									child: Column(
+										children: [
+											Container(
+												height: 200,
+												decoration: BoxDecoration(
+													color: Colors.black,
+													borderRadius: BorderRadius.circular(12),
+												),
+											),
+
+											SizedBox(
+												height: 8
+											),
+
+											Text(
+												'New Arrival ${index + 1}',
+												style: TextStyle(
+													fontSize: 16,
+													fontWeight: FontWeight.bold,
+												),
+											),
+											
+											Text(
+												'Price: RM10.00',
+											),
+										],
+									),
+								);
+							},
+						),
+					),
+
+
+					SizedBox(
+						height: 36,
+					),
+
+					Container(
+						margin: EdgeInsets.only(bottom: 8, left: 12, right: 12),
+						child: Row(
+							mainAxisAlignment: MainAxisAlignment.spaceBetween,
+							children: [
+								Text(
+									'Up to 50% Off',
+									style: TextStyle(
+										fontSize: 20,
+										fontWeight: FontWeight.bold,
+									),
+								),
+
+								TextButton(
+									onPressed: () {},
+									child: Text(
+										'See All',
+										style: TextStyle(
+											fontSize: 14,
+											color: Colors.black,
+										),
+									),
+								),
+							],
+						),
+					),
+
+					SizedBox(
+						height: 280,
+						child: ListView.builder(
+							itemCount: 10,
+							scrollDirection: Axis.horizontal,
+							itemBuilder: (context, index) {
+								return Container(
+									width: 200,
+									padding: EdgeInsets.all(8),
+									decoration: BoxDecoration(
+										color: Colors.grey[200],
+										borderRadius: BorderRadius.circular(12),
+										border: Border.all(
+											color: Colors.grey,
+											width: 1,
+										),
+									),
+									margin: EdgeInsets.symmetric(horizontal: 8),
+									child: Column(
+										children: [
+											Container(
+												height: 200,
+												decoration: BoxDecoration(
+													color: Colors.black,
+													borderRadius: BorderRadius.circular(12),
+												),
+											),
+
+											SizedBox(
+												height: 8
+											),
+
+											Text(
+												'Product Name ${index + 1}',
+												style: TextStyle(
+													fontSize: 16,
+													fontWeight: FontWeight.bold,
+												),
+											),
+											
+											Text(
+												'Price: RM10.00',
+											),
+										],
+									),
+								);
+							},
+						),
+					),
+
+					SizedBox(
+						height: 60,
+					),
+
 				],
 			),
 		);

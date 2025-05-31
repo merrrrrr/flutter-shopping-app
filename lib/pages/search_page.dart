@@ -1,6 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_shopping_app/widgets/product_card.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
@@ -26,12 +25,21 @@ class SearchPage extends StatelessWidget {
 						margin: EdgeInsets.only(left: 8, right: 8, top: 8),
 						child: TextField(
 							decoration: InputDecoration(
+								hintText: 'Search for products',
+								hintMaxLines: 1,
+								suffixIcon: Icon(Icons.search),
 								border: OutlineInputBorder(
 									borderRadius: BorderRadius.circular(4),
 								)
 							),
 						),
-					)
+					),
+
+					SizedBox(
+						height: 16,
+					),
+
+					
 				],
 			)
 
